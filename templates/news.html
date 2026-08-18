@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}News | KPDH x CR Hub{% endblock %}
+{% block content %}
+<div class="hero" style="text-align: left; padding: 1rem 0;">
+    <h1>Latest <span class="accent">News</span></h1>
+    <p>Stay updated with the crossover world.</p>
+</div>
+
+<div class="grid">
+    {% for item in news %}
+    <div class="card">
+        <div class="news-tag" style="background: var(--accent-purple); color: white; font-size: 0.7rem; padding: 2px 8px; border-radius: 10px; display: inline-block; margin-bottom: 0.5rem;">
+            {{ item.category }}
+        </div>
+        <h3>{{ item.title }}</h3>
+        <p style="color: var(--text-dim); font-size: 0.8rem; margin-bottom: 1rem;">{{ item.date }}</p>
+        <p>{{ item.summary }}</p>
+        <button class="btn btn-secondary" style="width: 100%;" onclick="openModal('<h3>{{ item.title }}</h3><p>Category: {{ item.category }}</p><hr><p>{{ item.summary }}</p><p>Full article coming soon...</p>')">
+            Read More
+        </button>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

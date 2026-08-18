@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}KPDH Hunters | KPDH x CR Hub{% endblock %}
+{% block content %}
+<div class="hero" style="text-align: left; padding: 1rem 0;">
+    <h1>KPDH <span class="accent">Hunters</span></h1>
+    <p>Elite demon hunters blending idol grace with lethal precision.</p>
+</div>
+
+<div class="grid">
+    {% for char in characters %}
+    <div class="card">
+        <div style="display: flex; justify-content: space-between; align-items: start;">
+            <div class="char-img-placeholder" style="width: 60px; height: 60px; background: var(--accent-purple); border-radius: 50%; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; font-weight: bold; color: white;">
+                {{ char.name[0] }}
+            </div>
+            <button class="fav-btn" data-id="kpdh-{{ loop.index }}" onclick="toggleFavorite('kpdh-{{ loop.index }}')">
+                <i class="fas fa-heart"></i>
+            </button>
+        </div>
+        <h3>{{ char.name }}</h3>
+        <p><strong>{{ char.role }}</strong></p>
+        <p style="color: var(--text-dim); font-size: 0.9rem;">{{ char.description }}</p>
+        <button class="btn btn-secondary" style="width: 100%;" onclick="openModal('<h3>{{ char.name }}</h3><p>{{ char.role }}</p><hr><p>{{ char.description }}</p><p><em>Note: Fan-made lore.</em></p>')">
+            Details
+        </button>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

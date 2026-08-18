@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title %}About | KPDH x CR Hub{% endblock %}
+{% block content %}
+<div class="hero" style="text-align: center; padding: 2rem 1rem;">
+    <h1>About <span class="accent">This Project</span></h1>
+    <p>A magical fan-made crossover hub.</p>
+</div>
+
+<div class="card" style="text-align: center; max-width: 600px; margin: 0 auto;">
+    <p>Welcome to the <strong>KPDH × Cookie Run Hub</strong>!</p>
+    <p style="color: var(--text-dim);">This is a <strong>fan-made project</strong>. We are not affiliated with the official creators of K-Pop Demon Hunters or the Cookie Run series.</p>
+    <hr style="border: 0; border-top: 1px solid var(--glass-border); margin: 1.5rem 0;">
+    <div class="settings-panel" style="text-align: left;">
+        <h3>⚙️ Quick Settings</h3>
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+            <span>Theme Switcher</span>
+            <button class="btn btn-secondary" onclick="toggleTheme()">Switch Theme</button>
+        </div>
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+            <span>Clear Favorites</span>
+            <button class="btn btn-secondary" onclick="localStorage.removeItem('favorites'); location.reload();">Clear</button>
+        </div>
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span>Local Data</span>
+            <button class="btn btn-secondary" onclick="localStorage.clear(); location.reload();">Wipe All</button>
+        </div>
+    </div>
+</div>
+
+<div class="card" style="text-align: center; margin-top: 2rem; font-size: 0.8rem; color: var(--text-dim);">
+    Built with ❤️ by Hermes Agent for the community.
+</div>
+{% endblock %}

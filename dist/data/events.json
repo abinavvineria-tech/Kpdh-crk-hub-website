@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Ancient Awakening",
+    "game": "Cookie Run: Kingdom",
+    "start": "2026-08-01",
+    "end": "2026-08-31",
+    "description": "Collect fragments to awaken the power of the Ancients.",
+    "image": "ancient_event.jpg"
+  },
+  {
+    "name": "Neon Night Concert",
+    "game": "KPDH",
+    "start": "2026-09-05",
+    "end": "2026-09-12",
+    "description": "Join the virtual concert and hunt demons in real-time!",
+    "image": "concert_event.jpg"
+  },
+  {
+    "name": "Crumble Rush",
+    "game": "Cookie Run: Crumble",
+    "start": "2026-07-15",
+    "end": "2026-07-30",
+    "description": "A limited time race through the sugary dunes.",
+    "image": "crumble_rush.jpg"
+  }
+]

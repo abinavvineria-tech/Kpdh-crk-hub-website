@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block title %}Events | KPDH x CR Hub{% endblock %}
+{% block content %}
+<div class="hero" style="text-align: left; padding: 1rem 0;">
+    <h1>Event <span class="accent">Timeline</span></h1>
+    <p>Mark your calendars for the magic.</p>
+</div>
+
+<div class="grid">
+    {% for event in events %}
+    <div class="card" id="event-{{ loop.index }}">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+            <div class="status-pill" id="status-{{ loop.index }}" style="font-size: 0.7rem; padding: 4px 10px; border-radius: 20px; font-weight: bold;">
+                Calculating...
+            </div>
+            <span style="font-size: 0.8rem; color: var(--text-dim);">{{ event.game }}</span>
+        </div>
+        <h3>{{ event.name }}</h3>
+        <p style="font-size: 0.9rem; color: var(--text-dim);">{{ event.start }} to {{ event.end }}</p>
+        <p>{{ event.description }}</p>
+    </div>
+    {% endfor %}
+</div>
+
+<script>
+function updateEventStatuses() {
+    const now = new Date();
+    {% for event in events %}
+    const start = new Date('{{ event.start }}');
+    const end = new Date('{{ event.end }}');
+    const pill = document.getElementById('status-{{ loop.index }}');
+    
+    if (now < start) {
+        pill.innerText = '🟡 Upcoming';
+        pill.style.background = '#fef3c7';
+        pill.style.color = '#92400e';
+    } else if (now > end) {
+        pill.innerText = '⚪ Ended';
+        pill.style.background = '#e5e7eb';
+        pill.style.color = '#374151';
+    } else {
+        pill.innerText = '🟢 Active';
+        pill.style.background = '#dcfce7';
+        pill.style.color = '#166534';
+    }
+    {% endfor %}
+}
+updateEventStatuses();
+</script>
+{% endblock %}

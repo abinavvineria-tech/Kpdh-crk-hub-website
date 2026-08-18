@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Rumi",
+    "role": "Vocalist / Leader",
+    "description": "The charismatic center of the group with a powerful purifying voice.",
+    "image": "rumi.jpg"
+  },
+  {
+    "name": "Mira",
+    "role": "Main Dancer / Assassin",
+    "description": "Blends grace and lethality with swift strikes and agile movements.",
+    "image": "mira.jpg"
+  },
+  {
+    "name": "Zoey",
+    "role": "Lead Rapper / Tech Expert",
+    "description": "Uses futuristic gadgets to track and trap demons in rhythm.",
+    "image": "zoey.jpg"
+  },
+  {
+    "name": "Jinu",
+    "role": "Sub Vocalist / Strategist",
+    "description": "The calm mind of the group, analyzing demon patterns.",
+    "image": "jinu.jpg"
+  },
+  {
+    "name": "Saja Boys",
+    "role": "Support Unit / Vanguard",
+    "description": "The powerhouse squad providing the rhythmic beat and brute force.",
+    "image": "saja_boys.jpg"
+  }
+]

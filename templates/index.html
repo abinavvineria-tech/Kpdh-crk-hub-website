@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block title %}Home | KPDH x CR Hub{% endblock %}
+{% block content %}
+<section class="hero">
+    <h1>KPDH <span class="accent">×</span> COOKIE RUN</h1>
+    <p>"Where hunters, idols, and cookies meet."</p>
+    <div class="btn-group">
+        <a href="/kpdh" class="btn btn-primary">Explore KPDH</a>
+        <a href="/cookies" class="btn btn-primary">Explore Cookie Run</a>
+        <a href="/news" class="btn btn-secondary">Latest Updates</a>
+    </div>
+</section>
+
+<div class="grid" style="margin-top: 2rem;">
+    <div class="card">
+        <h3><i class="fas fa-microphone"></i> Featured Hunter</h3>
+        <p>Meet Rumi, the purifying voice of KPDH.</p>
+        <a href="/kpdh" class="btn btn-secondary" style="width: 100%;">View Profile</a>
+    </div>
+    <div class="card">
+        <h3><i class="fas fa-cookie-bite"></i> Featured Cookie</h3>
+        <p>Pure Vanilla Cookie: The healing light of the Ancients.</p>
+        <a href="/cookies" class="btn btn-secondary" style="width: 100%;">View Profile</a>
+    </div>
+    <div class="card">
+        <h3><i class="fas fa-calendar-alt"></i> Upcoming Event</h3>
+        <p>Neon Night Concert: Coming Soon!</p>
+        <a href="/events" class="btn btn-secondary" style="width: 100%;">Check Timeline</a>
+    </div>
+</div>
+
+<div class="card" style="margin-top: 2rem; text-align: center; border-style: dashed;">
+    <p>✨ Join the magical fan community ✨</p>
+    <a href="/about" class="btn btn-secondary">Learn More</a>
+</div>
+{% endblock %}

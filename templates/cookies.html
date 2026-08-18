@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}Cookie Hub | KPDH x CR Hub{% endblock %}
+{% block content %}
+<div class="hero" style="text-align: left; padding: 1rem 0;">
+    <h1>Cookie <span class="accent">Run Hub</span></h1>
+    <p>A sweet collection of heroes from Kingdom and Crumble.</p>
+</div>
+
+<div class="grid">
+    {% for cookie in cookies %}
+    <div class="card">
+        <div style="display: flex; justify-content: space-between; align-items: start;">
+            <div class="char-img-placeholder" style="width: 60px; height: 60px; background: var(--accent-pink); border-radius: 50%; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; font-weight: bold; color: white;">
+                {{ cookie.name[0] }}
+            </div>
+            <button class="fav-btn" data-id="cookie-{{ loop.index }}" onclick="toggleFavorite('cookie-{{ loop.index }}')">
+                <i class="fas fa-heart"></i>
+            </button>
+        </div>
+        <h3>{{ cookie.name }}</h3>
+        <p><strong>{{ cookie.rarity }}</strong> | {{ cookie.game }}</p>
+        <p style="color: var(--text-dim); font-size: 0.9rem;">{{ cookie.description }}</p>
+        <button class="btn btn-secondary" style="width: 100%;" onclick="openModal('<h3>{{ cookie.name }}</h3><p>Rarity: {{ cookie.rarity }}</p><p>Game: {{ cookie.game }}</p><hr><p>{{ cookie.description }}</p>')">
+            Details
+        </button>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

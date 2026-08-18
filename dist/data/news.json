@@ -1,0 +1,23 @@
+[
+  {
+    "title": "KPDH World Tour: Demon Purge",
+    "date": "2026-08-20",
+    "category": "KPDH",
+    "summary": "Rumi and the group announce a worldwide tour to cleanse urban centers.",
+    "thumbnail": "tour.jpg"
+  },
+  {
+    "title": "Kingdom: The Beast Epoch Update",
+    "date": "2026-08-15",
+    "category": "Cookie Run: Kingdom",
+    "summary": "New Beast cookies arrive to challenge the Ancients in the latest patch.",
+    "thumbnail": "beast_update.jpg"
+  },
+  {
+    "title": "Crumble: First Look at New Region",
+    "date": "2026-08-10",
+    "category": "Cookie Run: Crumble",
+    "summary": "Explore the sugary ruins of the Crumble Highlands in the new teaser.",
+    "thumbnail": "crumble_region.jpg"
+  }
+]

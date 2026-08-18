@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Home | KPDH x CR Hub</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#2d004d">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="logo" onclick="location.href='index.html'">
+            <span class="logo-text">KPDH <span class="accent">×</span> CR</span>
+        </div>
+        <div class="header-actions">
+            <div class="search-trigger" onclick="toggleSearch()">
+                <i class="fas fa-search"></i>
+            </div>
+            <div class="theme-toggle" onclick="toggleTheme()">
+                <i class="fas fa-moon" id="theme-icon"></i>
+            </div>
+        </div>
+    </header>
+
+    <div id="search-overlay" class="search-overlay">
+        <div class="search-container">
+            <input type="text" id="global-search" placeholder="Search characters, news, events..." oninput="doSearch(this.value)">
+            <div id="search-results" class="search-results"></div>
+            <button class="close-search" onclick="toggleSearch()">&times;</button>
+        </div>
+    </div>
+
+    <main id="app-content">
+        <section class="hero">
+            <h1>KPDH <span class="accent">×</span> COOKIE RUN</h1>
+            <p>"Where hunters, idols, and cookies meet."</p>
+            <div class="btn-group">
+                <a href="kpdh.html" class="btn btn-primary">Explore KPDH</a>
+                <a href="cookies.html" class="btn btn-primary">Explore Cookie Run</a>
+                <a href="news.html" class="btn btn-secondary">Latest Updates</a>
+            </div>
+        </section>
+
+        <div class="grid" style="margin-top: 2rem;">
+            <div class="card">
+                <h3><i class="fas fa-microphone"></i> Featured Hunter</h3>
+                <p>Meet Rumi, the purifying voice of KPDH.</p>
+                <a href="kpdh.html" class="btn btn-secondary" style="width: 100%;">View Profile</a>
+            </div>
+            <div class="card">
+                <h3><i class="fas fa-cookie-bite"></i> Featured Cookie</h3>
+                <p>Pure Vanilla Cookie: The healing light of the Ancients.</p>
+                <a href="cookies.html" class="btn btn-secondary" style="width: 100%;">View Profile</a>
+            </div>
+            <div class="card">
+                <h3><i class="fas fa-calendar-alt"></i> Upcoming Event</h3>
+                <p>Neon Night Concert: Coming Soon!</p>
+                <a href="events.html" class="btn btn-secondary" style="width: 100%;">Check Timeline</a>
+            </div>
+        </div>
+
+        <div class="card" style="margin-top: 2rem; text-align: center; border-style: dashed;">
+            <p>✨ Join the magical fan community ✨</p>
+            <a href="about.html" class="btn btn-secondary">Learn More</a>
+        </div>
+    </main>
+
+    <nav class="bottom-nav">
+        <a href="index.html" class="nav-item active" data-page="home">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+        </a>
+        <a href="cookies.html" class="nav-item" data-page="cookies">
+            <i class="fas fa-cookie-bite"></i>
+            <span>Cookies</span>
+        </a>
+        <a href="kpdh.html" class="nav-item" data-page="kpdh">
+            <i class="fas fa-microphone"></i>
+            <span>KPDH</span>
+        </a>
+        <a href="news.html" class="nav-item" data-page="news">
+            <i class="fas fa-newspaper"></i>
+            <span>News</span>
+        </a>
+        <a href="about.html" class="nav-item" data-page="about">
+            <i class="fas fa-info-circle"></i>
+            <span>About</span>
+        </a>
+    </nav>
+
+    <div id="modal-container" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <script src="static/js/app.js"></script>
+</body>
+</html>
