@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up | KPDH x CR Hub</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="auth-container" style="display: flex; justify-content: center; align-items: center; min-height: 100vh; padding: 1rem;">
+        <div class="card" style="width: 100%; max-width: 400px; text-align: center;">
+            <div class="hero" style="padding: 1rem 0; background: none; -webkit-text-fill-color: var(--accent-pink);">
+                <h1>Join the Hub</h1>
+            </div>
+            <form id="signup-form" onsubmit="handleSignUp(event)">
+                <div style="margin-bottom: 1rem; text-align: left;">
+                    <label style="display: block; margin-bottom: 0.5rem; font-size: 0.9rem;">Username</label>
+                    <input type="text" id="sup-user" required style="width: 100%; padding: 0.8rem; border-radius: 10px; border: 1px solid var(--glass-border); background: var(--bg-card); color: var(--text-main);">
+                </div>
+                <div style="margin-bottom: 1rem; text-align: left;">
+                    <label style="display: block; margin-bottom: 0.5rem; font-size: 0.9rem;">Email</label>
+                    <input type="email" id="sup-email" required style="width: 100%; padding: 0.8rem; border-radius: 10px; border: 1px solid var(--glass-border); background: var(--bg-card); color: var(--text-main);">
+                </div>
+                <div style="margin-bottom: 1.5rem; text-align: left;">
+                    <label style="display: block; margin-bottom: 0.5rem; font-size: 0.9rem;">Password</label>
+                    <input type="password" id="sup-pass" required style="width: 100%; padding: 0.8rem; border-radius: 10px; border: 1px solid var(--glass-border); background: var(--bg-card); color: var(--text-main);">
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Create Account</button>
+            </form>
+            <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-dim);">
+                Already a member? <a href="signin.html" style="color: var(--accent-purple);">Sign In</a>
+            </p>
+        </div>
+    </div>
+    <script src="static/js/app.js"></script>
+</body>
+</html>

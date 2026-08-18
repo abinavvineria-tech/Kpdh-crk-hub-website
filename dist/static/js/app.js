@@ -3,6 +3,56 @@ async function fetchData(file) {
     return await response.json();
 }
 
+// --- AUTH LOGIC (LocalStorage Simulation) ---
+function handleSignUp(e) {
+    e.preventDefault();
+    const user = document.getElementById('sup-user').value;
+    const email = document.getElementById('sup-email').value;
+    const pass = document.getElementById('sup-pass').value;
+    
+    const userData = { username: user, email: email, password: pass };
+    localStorage.setItem(`user_${user}`, JSON.stringify(userData));
+    alert('Account created successfully! Please sign in.');
+    location.href = 'signin.html';
+}
+
+function handleSignIn(e) {
+    e.preventDefault();
+    const user = document.getElementById('sin-user').value;
+    const pass = document.getElementById('sin-pass').value;
+    
+    const stored = JSON.parse(localStorage.getItem(`user_${user}`));
+    if (stored && stored.password === pass) {
+        localStorage.setItem('currentUser', user);
+        alert('Welcome back, ' + user + '!');
+        location.href = 'index.html';
+    } else {
+        alert('Invalid username or password!');
+    }
+}
+
+function handleChangePass(e) {
+    e.preventDefault();
+    const current = document.getElementById('curr-pass').value;
+    const next = document.getElementById('new-pass').value;
+    const conf = document.getElementById('conf-pass').value;
+    const user = localStorage.getItem('currentUser');
+
+    if (!user) { alert('Please sign in first!'); return; }
+    if (next !== conf) { alert('Passwords do not match!'); return; }
+    
+    const stored = JSON.parse(localStorage.getItem(`user_${user}`));
+    if (stored && stored.password === current) {
+        stored.password = next;
+        localStorage.setItem(`user_${user}`, JSON.stringify(stored));
+        alert('Password updated successfully!');
+        location.href = 'about.html';
+    } else {
+        alert('Current password is incorrect!');
+    }
+}
+
+// --- REST OF SITE LOGIC ---
 function toggleSearch() {
     const overlay = document.getElementById('search-overlay');
     overlay.style.display = overlay.style.display === 'flex' ? 'none' : 'flex';
@@ -22,10 +72,10 @@ async function doSearch(query) {
     const results = { cookies: [], kpdh: [], news: [], events: [] };
     const q = query.toLowerCase();
 
-    cookies.forEach(c => { if (q in c.name.toLowerCase()) results.cookies.push(c); });
-    kpdh.forEach(k => { if (q in k.name.toLowerCase()) results.kpdh.push(k); });
-    news.forEach(n => { if (q in n.title.toLowerCase()) results.news.push(n); });
-    events.forEach(e => { if (q in e.name.toLowerCase()) results.events.push(e); });
+    cookies.forEach(c => { if (c.name.toLowerCase().includes(q)) results.cookies.push(c); });
+    kpdh.forEach(k => { if (k.name.toLowerCase().includes(q)) results.kpdh.push(k); });
+    news.forEach(n => { if (n.title.toLowerCase().includes(q)) results.news.push(n); });
+    events.forEach(e => { if (e.name.toLowerCase().includes(q)) results.events.push(e); });
 
     let html = '';
     const categories = { 'cookies': '🍪 Cookie', 'kpdh': '🎤 KPDH', 'news': '📰 News', 'events': '📅 Event' };
@@ -34,7 +84,7 @@ async function doSearch(query) {
         items.forEach(item => {
             const name = item.name || item.title;
             html += `
-                <div class="search-item" onclick="location.href='/${key === 'cookies' ? 'cookies' : key === 'kpdh' ? 'kpdh' : key === 'news' ? 'news' : 'events'}.html'">
+                <div class="search-item" onclick="location.href='${key === 'cookies' ? 'cookies' : key === 'kpdh' ? 'kpdh' : key === 'news' ? 'news' : 'events'}.html'">
                     <span><strong>${categories[key]}</strong>: ${name}</span>
                     <i class="fas fa-chevron-right"></i>
                 </div>
