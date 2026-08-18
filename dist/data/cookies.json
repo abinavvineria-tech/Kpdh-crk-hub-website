@@ -16,12 +16,17 @@
   { "name": "Pitaya Dragon Cookie", "rarity": "Dragon", "game": "Kingdom", "description": "The fiery Red Dragon of the Valley." },
   { "name": "Ananas Dragon Cookie", "rarity": "Dragon", "game": "Kingdom", "description": "The golden Tropical Dragon." },
   { "name": "Lotus Dragon Cookie", "rarity": "Dragon", "game": "Kingdom", "description": "The elegant Lotus Dragon." },
-  { "name,": "Ivory Cookie", "rarity": "Super Epic", "game": "Kingdom", "description": "A refined ivory-carved warrior." },
+  { "name": "Ivory Cookie", "rarity": "Super Epic", "game": "Kingdom", "description": "A refined ivory-carved warrior." },
   { "name": "Stardust Cookie", "rarity": "Super Epic", "game": "Kingdom", "description": "A cosmic traveler lost in the stars." },
   { "name": "Wildberry Cookie", "rarity": "Epic", "game": "Kingdom", "description": "The loyal bodyguard of Hollyberry Kingdom." },
   { "name": "Madeleine Cookie", "rarity": "Epic", "game": "Kingdom", "description": "The shining knight of the Republic." },
   { "name": "Espresso Cookie", "rarity": "Epic", "game": "Kingdom", "description": "A master of coffee magic." },
   { "name": "GingerBrave", "rarity": "Common", "game": "Kingdom", "description": "The brave soul who started it all." },
   { "name": "Strawberry Cookie", "rarity": "Rare", "game": "Kingdom", "description": "A shy cookie who loves gaming." },
-  { "name": "Wizard Cookie", "rarity": "Rare", "game": "Kingdom", "description": "A studious magic user." }
+  { "name": "Wizard Cookie", "rarity": "Rare", "game": "Kingdom", "description": "A studious magic user." },
+  { "name": "Pure Vanilla Cookie", "rarity": "Ancient", "game": "Kingdom", "description": "The kind and healing leader of the Ancient Cookies." },
+  { "name": "Hollyberry Cookie", "rarity": "Ancient", "game": "Kingdom", "description": "A fierce warrior with an indomitable spirit." },
+  { "name": "Dark Cacao Cookie", "rarity": "Ancient", "game": "Kingdom", "description": "The stern ruler of the Dark Cacao Kingdom." },
+  { "name": "Golden Cheese Cookie", "rarity": "Ancient", "game": "Kingdom", "description": "The opulent and proud ruler of the Golden City." },
+  { "name": "White Lily Cookie", "rarity": "Ancient", "game": "Kingdom", "description": "A mysterious cookie with a deep connection to nature." }
 ]
