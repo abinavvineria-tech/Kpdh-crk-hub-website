@@ -22,5 +22,69 @@
     "end": "2026-07-30",
     "description": "A limited time race through the sugary dunes.",
     "image": "crumble_rush.jpg"
+  },
+  {
+    "name": "The Honmoon Stamp Rally",
+    "game": "Cookie Run: Kingdom",
+    "start": "2026-04-08",
+    "end": "2026-04-22",
+    "description": "Collect stamps across the kingdom to unlock exclusive rewards.",
+    "image": "stamp_rally.jpg"
+  },
+  {
+    "name": "Gwi-Ma! Demon Distress",
+    "game": "Cookie Run: Kingdom",
+    "start": "2026-04-15",
+    "end": "2026-05-01",
+    "description": "Team up with KPDH to stop the demon infestation.",
+    "image": "demon_distress.jpg"
+  },
+  {
+    "name": "HUNTR/X Live: Survival on Stage",
+    "game": "Cookie Run: Kingdom",
+    "start": "2026-04-20",
+    "end": "2026-05-05",
+    "description": "A high-stakes musical battle for survival.",
+    "image": "survival_stage.jpg"
+  },
+  {
+    "name": "Crumble Pre-Registration",
+    "game": "Cookie Run: Crumble",
+    "start": "2026-06-29",
+    "end": "2026-07-29",
+    "description": "Register now to get exclusive rewards at launch!",
+    "image": "pre_reg.jpg"
+  },
+  {
+    "name": "Who's Your Fav?",
+    "game": "Cookie Run: Kingdom",
+    "start": "2026-05-01",
+    "end": "2026-05-15",
+    "description": "Vote for your favorite KPDH x CRK crossover character!",
+    "image": "fav_vote.jpg"
+  },
+  {
+    "name": "Derpy's Catch the Jelly Worm",
+    "game": "Cookie Run: Kingdom",
+    "start": "2026-05-10",
+    "end": "2026-05-25",
+    "description": "A whimsical mini-game with Derpy and Sussie.",
+    "image": "jelly_worm.jpg"
+  },
+  {
+    "name": "B!TES' Rhythm Workshop",
+    "game": "Cookie Run: Kingdom",
+    "start": "2026-06-01",
+    "end": "2026-06-15",
+    "description": "Learn the beats of the B!TES studio in this rhythmic challenge.",
+    "image": "rhythm_workshop.jpg"
+  },
+  {
+    "name": "Trial of Glory: Wind Archer",
+    "game": "Cookie Run: Kingdom",
+    "start": "2026-08-12",
+    "end": "2026-08-26",
+    "description": "Test your strength in the trials of the Wind Archer.",
+    "image": "wind_archer_trial.jpg"
   }
 ]
